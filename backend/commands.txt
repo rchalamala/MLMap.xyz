@@ -1,0 +1,7 @@
+python api_request_parallel_processor.py --requests_filepath data/featuring_requests.jsonl --save_filepath data/featuring_responses.jsonl --request_url https://api.openai.com/v1/chat/completions --max_requests_per_minute 150
+python api_request_parallel_processor.py --requests_filepath data/embedding_requests.jsonl --save_filepath data/embedding_responses.jsonl --max_requests_per_minute 150
+
+
+tar -cvf data.tar embedded (in data directory)
+pzstd data.tar -o data.tar.zst -12 (in data directory)
+protoc client_side.proto --python_out . (in modal directory)

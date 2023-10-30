@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (max-width: 600px) {
+  .embedding-visualization-sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .embedding-visualization-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .vertical-legend {
+    flex-direction: column;
+  }
+}
+
+.logo-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 9999;
+  display: block;
+}
+
+.menu-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+  display: none;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.menu-button2 {
+  position: absolute;
+  top: 8px;
+  right: 11px;
+  z-index: 9999;
+  display: none;
+  padding: 8px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .menu-button {
+    display: block;
+  }
+
+  .menu-button2 {
+    display: block;
+  }
+}
+
+@media (min-width: 600px) {
+  .floating-sidebar-fullscreen {
+    position: fixed;
+    right: 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .floating-sidebar-fullscreen {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 600px) {
+  .responsive-instruction-box {
+    max-width: 20rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .responsive-instruction-box {
+    max-width: 24rem;
+  }
+}
+
+.legend-container {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+  justify-items: center;
+  display: block;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: default;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+@media (max-width: 450px) {
+  legend-container {
+    font-size: 0.4rem;
+    line-height: 0.7rem;
+  }
+}
+
+.centered-sidebar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: center;
+}
+
+.abstract-bg-kludge::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0.75;
+}
+
+.fas {
+  font-size: 32px;
+}
+
+.fa-bars {
+  font-size: 32px;
+}
+
+.fa-times-icon {
+  font-size: 64px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.card-wrapper {
+  max-width: 400px;
+}

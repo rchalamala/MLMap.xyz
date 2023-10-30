@@ -1,0 +1,10 @@
+aiohttp
+jsonschema
+matplotlib
+modal-client
+numpy
+openai
+rapidfuzz
+scipy
+tiktoken
+umap-learn

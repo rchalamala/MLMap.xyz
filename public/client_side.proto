@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+message Paper {
+    float x = 1;
+    float y = 2;
+    int64 hash = 3;
+    string feature = 4;
+}
+
+message Year {
+    repeated Paper papers = 1;
+}
+
+message Conference {
+    repeated Year years = 1;
+}
+
+message Data {
+    repeated Conference conferences = 1;
+}
