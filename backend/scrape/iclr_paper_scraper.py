@@ -6,7 +6,6 @@ import sys
 import requests
 from bs4 import BeautifulSoup
 
-# desired_year = 2023
 desired_year = int(sys.argv[1])
 print("Desired year: " + str(desired_year))
 
