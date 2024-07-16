@@ -1,23 +1,23 @@
 // @ts-check
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Dialog } from "@headlessui/react";
 
 interface InstructionPopupProps {
-  isOpen: boolean;
   onClose: () => void;
 }
 
-const InstructionPopup: React.FC<InstructionPopupProps> = ({ isOpen, onClose }) => {
-  const [isModalOpen, setIsModalOpen] = useState(isOpen);
+const InstructionPopup: React.FC<InstructionPopupProps> = ({ onClose }) => {
+  const [isModalOpen, setIsModalOpen] = useState(true);
 
-  useEffect(() => {
-    setIsModalOpen(isOpen);
-  }, [isOpen]);
+  const handleClose = () => {
+    setIsModalOpen(false);
+    onClose();
+  };
 
   return (
     <Dialog
       open={isModalOpen}
-      onClose={onClose}
+      onClose={handleClose}
       as="div"
       className="fixed inset-0 z-10 overflow-y-auto"
       aria-labelledby="modal-title"
@@ -57,20 +57,20 @@ const InstructionPopup: React.FC<InstructionPopupProps> = ({ isOpen, onClose }) 
             </p>
           </Dialog.Description>
           <div className="mt-4 flex justify-center">
-            <Dialog.Close
-              as="button"
+            <button
+              onClick={handleClose}
               className="rounded-lg bg-sky-500 px-4 py-2 font-semibold text-white hover:bg-sky-600"
             >
               Start Exploring
-            </Dialog.Close>
+            </button>
           </div>
-          <Dialog.Close
-            as="button"
+          <button
+            onClick={handleClose}
             className="absolute right-2 top-2 text-gray-600 hover:text-gray-800"
             aria-label="Close"
           >
             &#10005;
-          </Dialog.Close>
+          </button>
         </div>
       </div>
     </Dialog>
