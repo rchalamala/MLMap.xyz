@@ -21,6 +21,7 @@ export const conferences = {
   2: { name: "ICCV", color: "#4895e8" },
   3: { name: "ICML", color: "#ffcd82" },
   4: { name: "NeurIPS", color: "#ff788c" },
+  5: { name: "ICLR", color: "#9b59b6" },
 };
 
 const EmbeddingVisualization = ({
