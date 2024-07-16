@@ -1,4 +1,4 @@
 from modal import NetworkFileSystem, Stub
 
-stub = Stub("ai-landscape-visualizer")
+stub = Stub("mlmap")
 volume = NetworkFileSystem.persisted("data")
